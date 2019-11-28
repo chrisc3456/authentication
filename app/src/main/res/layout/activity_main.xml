@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonAuthenticate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorAccent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/button_authenticate"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewResult"
+        tools:text="Authentication results" />
+
+    <ImageView
+        android:id="@+id/imageViewResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAuthenticate"
+        app:layout_constraintStart_toStartOf="@+id/buttonAuthenticate"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/icon_tick" />
+</androidx.constraintlayout.widget.ConstraintLayout>
